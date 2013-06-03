@@ -1,0 +1,8 @@
+UEFI/Clean Compile	DSDT	Patches/UEFI-Clean_Compile/ib1-ami_efi_clean_compile.txt
+Desktop-AMD/Nvidia-A1	DSDT	Patches/UEFI-Desktop/uefi1-hdmi_audio-1.txt
+Desktop-HD4K/HD3K/AMD/Nvidia-A3	DSDT	Patches/UEFI-Desktop/uefi2-hdmi_audio-3.txt
+Laptop-A3-FB_01	DSDT	Patches/UEFI-Laptop/uefi3-hdmi_audio-3-1.txt
+Laptop-A3-FB_03	DSDT	Patches/UEFI-Laptop/uefi4-hdmi_audio-3-3.txt
+NUC-HD4K-A1	DSDT	Patches/UEFI-NUC/uefi5-hdmi_audio-1.txt
+HD4K-on-6_Series-MEI	DSDT	Patches/UEFI-MEI/ib4-mei_hd4000-6_series-fix.txt
+HD3K-on-7_Series-MEI	DSDT	Patches/UEFI-MEI/sb5-mei_hd3000-7_series-fix.txt

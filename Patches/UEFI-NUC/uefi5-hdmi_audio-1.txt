@@ -1,0 +1,43 @@
+# Maintained by: toleda for: github.com/toleda/audio_hdmi
+# File: uefi5-hdmi_audio-1_v2.0
+# Credit: PikeRAlpha, PJALM, RehabMan, SL_UnderWater
+
+# NUC HD4K HDMI audio dsdt edits (Audio ID: 1).
+# IB/Framebuffer: 0166 001A Macmini6,1 FB/HDMI connector/port 0x7, 
+# FB/DP connector/port # 0x6, FB/HDMI connector/port 0x5 - connector edit required
+#
+# Tasks:
+# 1. Insert HDMI audio injection into device IGPU (HD4K HDMI audio - Part 1/2)
+# 2. Insert HDMI audio injection into device HDEF (HD4K HDMI audio - Part 2/2)
+#
+# 1. Insert HDMI audio injection into device IGPU (HD3K/HD4K HDMI audio - Part 1/2)
+into method label _DSM parent_adr 0x00020000 remove_entry;
+into device name_adr 0x00020000 insert
+begin
+	Method (_DSM, 4, NotSerialized)\n
+	{\n
+	    If (LEqual (Arg2, Zero)) { Return (Buffer() { 0x03 } ) }\n
+	    Return (Package()\n
+	    {\n
+	        "AAPL,ig-platform-id", Buffer() { 0x1A, 0x00, 0x66, 0x01 },\n
+	        "hda-gfx", Buffer() { "onboard-1" },\n
+	    })\n
+    }\n
+end;
+# 2. Insert HDMI audio injection into device HDEF (HD3K/HD4K HDMI audio - Part 2/2)
+into method label _DSM parent_adr 0x001B0000 remove_entry;
+into device name_adr 0x001B0000 insert
+begin
+    Method (_DSM, 4, NotSerialized)\n
+    {\n
+	    If (LEqual (Arg2, Zero)) { Return (Buffer() { 0x03 } ) }\n
+	    Return (Package()\n
+	    {\n
+                "layout-id", Buffer() { 0x01, 0x00, 0x00, 0x00 },\n
+                "PinConfigurations", Buffer(Zero) {},\n
+  	        "hda-gfx", Buffer() { "onboard-1" },\n
+	    })\n
+    }\n
+end;
+into definitionblock code_regex . insert
+begin Store ("uefi5-hdmi_audio-1.txt_v2.0 dsdt edits, github.com/toleda", Debug) end

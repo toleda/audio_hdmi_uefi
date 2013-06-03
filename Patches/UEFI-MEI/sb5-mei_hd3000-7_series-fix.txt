@@ -1,0 +1,32 @@
+# Maintained by: toleda for: github.com/toleda_hdmi_hd3000
+# File: sb5-mei_hd3000-7_series-fix.txt_v1.0
+# Insert method MEI_SB to adr 0x00160000 into dsdt
+#
+into device name_adr 0x00160000 set_label
+begin
+MEI
+end;
+into device name_adr 0x00160000 parent_label PCI0 remove_entry;
+into device label PCI0 insert
+begin
+Device (MEI)\n
+{\n
+    Name (_ADR, 0x00160000)\n
+    Method (_DSM, 4, NotSerialized)\n
+    {\n
+        Store (Package (0x02)\n
+
+            {\n
+                "device-id", \n
+                Buffer (0x04)\n
+                {\n
+                    0x3a, 0x1c, 0x00, 0x00\n
+                }, \n
+            }, Local0)\n
+        DTGP (Arg0, Arg1, Arg2, Arg3, RefOf (Local0))\n
+        Return (Local0)\n
+    }\n
+}\n
+end;
+into definitionblock code_regex . insert
+begin Store ("sb5-mei_hd3000-7_series-fix.txt_v1.0 dsdt edits, github.com/toleda", Debug) end
