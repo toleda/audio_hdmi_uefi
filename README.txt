@@ -3,12 +3,13 @@ audio_hdmi_uefi
 OS X UEFI AMD/Nvidia/HD4K/HD3K HDMI Audio dsdt edits
 
 This guide enables OS X HDMI audio on Intel based motherboards with a bootable clean install of OS X.  Supported HDMI audio graphics systems are AMD discrete graphics cards (HD5xxx and HD6xxx), Nvidia discrete graphics cards (4xx, 5xxx and 6xx) and Intel HD4K and HD3K integrated graphics systems.  The Optimized AppleHDA.kext supports HDMI audio and Realtek audio codecs (ALC885, ALC887, ALC888, ALC889, ALC892 and ALC898) for onboard audio.  The native ML AppleHDA.kext supports only HDMI audio when configured properly. In Mountain Lion, the Optimized AppleHDA.kext supports 2 Audio_IDs for HDMI and Realtek onboard audio:
-Audio_ID: 1 supports AMD/Nvidia HDMI and 3, 5 and 6 port ALC8xx onboard audio (HD3000/       	HD4000 HDMI audio not available)
-Audio_ID: 3 supports HD3000/HD4000 with or without AMD/Nvidia HDMI and 3, 5 and 6 port 	ALC8xx onboard audio (Black port - not available)
+1. Audio_ID: 1 supports AMD/Nvidia HDMI and 3, 5 and 6 port ALC8xx onboard audio (HD3000/       HD4000 HDMI audio not available)
+2. Audio_ID: 3 supports HD3000/HD4000 with or without AMD/Nvidia HDMI and 3, 5 and 6 port ALC8xx onboard audio (Black port - not available)
 
 Notes
 1. Native ML AppleHDA.kext, use Audio_ID: 1, for HDMI audio only/no onboard audio
 2. Both Integrated and Discrete HDMI audio, use Audio_ID:3, for HDMI audio and supported Realtek on board audio
+3. Framebuffer edits may be required in addition to dsdt edits for working HDMI audio
 
 More Information
 1. Mountain Lion: Optimized AppleHDA for Realtek ALC8xx
