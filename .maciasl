@@ -1,4 +1,4 @@
-UEFI/Clean Compile	DSDT	Patches/UEFI-Clean_Compile/ib1-ami_efi_clean_compile.txt
+UEFI-Clean Compile	DSDT	Patches/UEFI-Clean_Compile/ib1-ami_efi_clean_compile.txt
 Desktop-AMD/Nvidia-A1	DSDT	Patches/UEFI-Desktop/uefi1-hdmi_audio-1.txt
 Desktop-HD4K/HD3K/AMD/Nvidia-A3	DSDT	Patches/UEFI-Desktop/uefi2-hdmi_audio-3.txt
 Laptop-A3-FB_01	DSDT	Patches/UEFI-Laptop/uefi3-hdmi_audio-3-1.txt
