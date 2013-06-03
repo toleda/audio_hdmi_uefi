@@ -4,10 +4,7 @@
 # hdmi_audio_ami_efi_hd4000-3.txt
 # Insert device MEI_IB to adr 0x00160000 into dsdt
 #
-into device name_adr 0x00160000 set_label
-begin
-MEI
-end;
+into device name_adr 0x00160000 set_label begin MEI end;
 into device name_adr 0x00160000 parent_label PCI0 remove_entry;
 into device label PCI0 insert
 begin
@@ -22,6 +19,7 @@ Device (MEI)\n
                 "layout-id", Buffer() { 0x3a, 0x1e, 0x00, 0x00 },\n
 	    })\n
     }\n
+}\n
 end;
 into definitionblock code_regex . insert
 begin Store ("ib4-mei_hd4000-6_series-fix.txt_v2.0 dsdt edits, github.com/toleda", Debug) end
