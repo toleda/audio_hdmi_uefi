@@ -15,7 +15,7 @@ More Information
 1. Mountain Lion: Optimized AppleHDA for Realtek ALC8xx
 http://www.tonymacx86.com/audio/76202-mountain-lion-optimized-applehda-realtek-alc8xx.html#post472375
 2. ML: UEFI HDMI Audio
-http://www.tonymacx86.com/
+http://www.tonymacx86.com/hdmi-audio/100492-easy-guide-ml-uefi-hdmi-audio.html
 3. Mountain Lion HDMI Audio
 http://www.tonymacx86.com/hdmi-audio/70765-mountain-lion-hdmi-audio.html
 
