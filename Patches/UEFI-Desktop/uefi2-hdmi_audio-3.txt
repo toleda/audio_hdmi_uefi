@@ -81,7 +81,7 @@ begin
 	    Return (Package()\n
 	    {\n
 	        "AAPL,snb-platform-id", Buffer() { 0x10, 0x00, 0x03, 0x00 },\n
-	        "AAPL,ig-platform-id", Buffer() { 0x03, 0x00, 0x66, 0x01 },\n
+	        "AAPL,ig-platform-id", Buffer() { 0x0A, 0x00, 0x66, 0x01 },\n
 	        "hda-gfx", Buffer() { "onboard-1" },\n
 	    })\n
     }\n
