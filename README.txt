@@ -49,7 +49,10 @@ Guides
     uefi5. NUC-HD4K-A1 - NUC HDMI audio edits (2xHDMI and TB)
     ib4. HD4K-on-6_Series_MEI - HD4K MEI dsdt edit (apply once, only with uefi1 - uefi4)
     3b5. HD3K-on-7_Series_MEI - HD3K MEI dsdt edit (apply once, only with uefi1 - uefi4)
-1c. Troubleshooting/Post to http://www.tonymacx86.com/hdmi-audio/
+
+Troubleshooting/Post
+1. http://www.tonymacx86.com/hdmi-audio/100492-easy-guide-ml-uefi-hdmi-audio.html
+2. http://www.insanelymac.com/forum/topic/291103-mountain-lion-hdmi-audio/
 
 toleda
 https://github.com/toleda/audio_hdmi_uefi
