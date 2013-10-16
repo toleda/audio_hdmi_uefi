@@ -21,7 +21,7 @@ http://www.tonymacx86.com/hdmi-audio/70765-mountain-lion-hdmi-audio.html
 
 ML: UEFI HDMI Audio dsdt edits
 1. MaciASL - http://sourceforge.net/projects/maciasl/?source=navbar
-2. Configuration: MaciASL/Preferences/Sources/+/
+2. Configuration: MaciASL/Preferences/Sources/+/  (copy/paste URL, don't click)
 3. URL: https://raw.github.com/toleda/audio_uefi/master
 4. Download/ZIP: https://github.com/toleda/audio_hdmi_uefi
 
