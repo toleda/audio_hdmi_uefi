@@ -19,6 +19,10 @@ http://www.tonymacx86.com/hdmi-audio/100492-easy-guide-ml-uefi-hdmi-audio.html
 3. Mountain Lion HDMI Audio
 http://www.tonymacx86.com/hdmi-audio/70765-mountain-lion-hdmi-audio.html
 
+Two ML UEFI HDMI audio enabling techniques - select one
+1. ML: UEFI HDMI Audio dsdt (with dsdt edits) 
+2. ML: UEFI HDMI Audio ssdt (with native dsdt)
+
 ML: UEFI HDMI Audio dsdt edits
 1. MaciASL - http://sourceforge.net/projects/maciasl/?source=navbar
 2. Configuration: MaciASL/Preferences/Sources/+/  (copy/paste URL, don't click)
@@ -36,6 +40,20 @@ Usage
 
 Installation - edited dsdt.aml to Extra
 1. MaciASL/File/Save As…/ACPI Machine Language Binary/Extra/dsdt.aml (add extension)
+2. Rebuild kernel cache
+3. Restart
+
+ML: UEFI HDMI Audio ssdt
+1. https://github.com/toleda/audio_uefi/tree/master/ssdt_7series
+2. Copy Downloads/audio_ssdt-hdmi.. . ./SSDT-1.aml to Extra
+2a. If Extra/SSDT.aml is present, install SSDT-1.aml as is: Extra/SSDT-1.aml
+2b. If no Extra/SSDT.aml, rename SSDT-1.aml to SSDT.aml and install as: Extra/SSDT.aml
+2c. The 1st SSDT is SSDT, 2nd is SSDT-1, 3rd is SSDT-2, etc.; no gaps
+3. Enable ssdt
+3a. Chameleon/Chimera: Add DropSSDT=Yes to org,chameleon.Boot.plist
+3b. Clover: Set DropOem=true to config.plist/ACPI/SSDT
+4. Rebuild kernel cache
+5. Restart
 
 Guides
 1. OS X UEFI AMD/Nvidia/HD4K/HD3K HDMI Audio
@@ -49,6 +67,8 @@ Guides
     uefi5. NUC-HD4K-A1 - NUC HDMI audio edits (2xHDMI and TB)
     ib4. HD4K-on-6_Series_MEI - HD4K MEI dsdt edit (apply once, only with uefi1 - uefi4)
     3b5. HD3K-on-7_Series_MEI - HD3K MEI dsdt edit (apply once, only with uefi1 - uefi4)
+1c. ssdts
+    audio_ssdt-hdmi-ami_hd4k-amd-nvidia-3_v4.zip
 
 Troubleshooting/Post
 1. http://www.tonymacx86.com/hdmi-audio/100492-easy-guide-ml-uefi-hdmi-audio.html
