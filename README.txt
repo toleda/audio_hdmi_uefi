@@ -2,7 +2,7 @@ audio_hdmi_uefi
 ============
 OS X UEFI AMD/Nvidia/HD4K/HD3K HDMI Audio dsdt edits
 
-This guide enables OS X HDMI audio on Intel based motherboards with a bootable clean install of OS X.  Supported HDMI audio graphics systems are AMD discrete graphics cards (HD5xxx and HD6xxx), Nvidia discrete graphics cards (4xx, 5xxx and 6xx) and Intel HD4K and HD3K integrated graphics systems.  The Optimized AppleHDA.kext supports HDMI audio and Realtek audio codecs (ALC885, ALC887, ALC888, ALC889, ALC892 and ALC898) for onboard audio.  The native ML AppleHDA.kext supports only HDMI audio when configured properly. In Mountain Lion, the Optimized AppleHDA.kext supports 2 Audio_IDs for HDMI and Realtek onboard audio:
+This guide enables OS X HDMI audio on Intel based motherboards with a bootable clean install of OS X.  Supported HDMI audio graphics systems are AMD discrete graphics cards (HD5xxx, HD6xxx and HD7xxx), Nvidia discrete graphics cards (4xx, 5xx, 6xx and 7xx) and Intel HD4K and HD3K integrated graphics systems.  The Optimized AppleHDA.kext supports HDMI audio and Realtek audio codecs (ALC885, ALC887, ALC888, ALC889, ALC892 and ALC898) for onboard audio.  The native ML AppleHDA.kext supports only HDMI audio when configured properly. In Mountain Lion, the Optimized AppleHDA.kext supports 2 Audio_IDs for HDMI and Realtek onboard audio:
 1. Audio_ID: 1 supports AMD/Nvidia HDMI and 3, 5 and 6 port ALC8xx onboard audio (HD3000/       HD4000 HDMI audio not available)
 2. Audio_ID: 3 supports HD3000/HD4000 with or without AMD/Nvidia HDMI and 3, 5 and 6 port ALC8xx onboard audio (Black port - not available)
 
@@ -10,6 +10,10 @@ Notes
 1. Native ML AppleHDA.kext, use Audio_ID: 1, for HDMI audio only/no onboard audio
 2. Both Integrated and Discrete HDMI audio, use Audio_ID:3, for HDMI audio and supported Realtek on board audio
 3. Framebuffer edits may be required in addition to dsdt edits for working HDMI audio
+
+OS X versions supported
+1. Mavericks.10.9 and newer
+2. Mountain Lion/10.8.2 and newer
 
 More Information
 1. Mountain Lion: Optimized AppleHDA for Realtek ALC8xx
@@ -55,9 +59,23 @@ ML: UEFI HDMI Audio ssdt
 4. Rebuild kernel cache
 5. Restart
 
+Problem Reporting
+1. Motherboard/BIOS version/processor/graphics/OS and version
+2. Copy of dsdt (if edited)
+3. Copy of HDMI audio SSDT (if installed)
+4. Copy of IORegistryExplorer
+
+Troubleshooting/Post w/attachments 2-4, above
+1. Mavericks/10.9
+1a. http://www.tonymacx86.com/hdmi-audio/112469-m-hdmi-audio.html
+1b. http://www.insanelymac.com/forum/topic/292999-mavericks-applehda-hdmi-audio/
+2. Mountain Lion/10.8
+2a.http://www.tonymacx86.com/hdmi-audio/70762-mountain-lion-hdmi-audio-ami-dsdt.html
+2b. http://www.insanelymac.com/forum/topic/291103-mountain-lion-hdmi-audio/
+
 Guides
 1. OS X UEFI AMD/Nvidia/HD4K/HD3K HDMI Audio
-1a. [Guide] ML-uefi_hdmi_audio_dsdt_edits
+1a. [Guide]-UEFI_hdmi_audio_dsdt_edits_v2.1.pdf.zip
 1b. Patches
     ib1. UEFI-Clean Compile - fix native dsdt compiler errors for successful dsdt edits
     uefi1. Desktop-AMD/Nvidia-A1 - AMD/Nvidia HDMI audio dsdt edits
@@ -69,10 +87,6 @@ Guides
     3b5. HD3K-on-7_Series_MEI - HD3K MEI dsdt edit (apply once, only with uefi1 - uefi4)
 1c. ssdts
     audio_ssdt-hdmi-ami_hd4k-amd-nvidia-3_v4.zip
-
-Troubleshooting/Post
-1. http://www.tonymacx86.com/hdmi-audio/100492-easy-guide-ml-uefi-hdmi-audio.html
-2. http://www.insanelymac.com/forum/topic/291103-mountain-lion-hdmi-audio/
 
 toleda
 https://github.com/toleda/audio_hdmi_uefi
