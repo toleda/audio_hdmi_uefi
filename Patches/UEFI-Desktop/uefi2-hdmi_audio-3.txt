@@ -1,16 +1,16 @@
 # Maintained by: toleda for: github.com/toleda/audio_hdmi
 # File: uefi2-hdmi_audio-3_v2.0
 # Credit: PikeRAlpha, PJALM, RehabMan, SL_UnderWater
-
-# Desktop AMD/Nvidia/HD3K/HD4K HDMI audio dsdt edits (Audio ID: 3)
-# Enables HD3K/AMD  and HD4K/AMD/Nvidia AirPlay Mirroring.
+#
+# Desktop HD3K/HD4K/AMD/Nvidia HDMI audio dsdt edits (Audio ID: 3)
+# Enables HD3K/AMD/Nvidia and HD4K/AMD/Nvidia AirPlay Mirroring.
 # SB/Framebuffer: 0003 0010 MacMini5,1 - FB/HDMI connector/port 0x7
 # IB/Framebuffer: 0166 001A Macmini6,1 - FB/HDMI connector/port 0x7
+#
 # NOTE: Run this patch file only once on a dsdt.  
 # If you must run this patch again: delete Steps 1, 2 and 3, 
 # patch with Steps 4, 5 and 6 only.
 #
-# Tasks:
 # 1. Remove PEGP device - if present
 # 2. Rename GFX0 devices to IGPU - Verify IOReg/GFXO@2
 # 3. Rename device PEG0 to device PEGP - Verify IOReg/PEG0@1
@@ -84,7 +84,7 @@ begin
 	        "AAPL,ig-platform-id", Buffer() { 0x0A, 0x00, 0x66, 0x01 },\n
 	        "hda-gfx", Buffer() { "onboard-1" },\n
 	    })\n
-    }\n
+	}\n
 end;
 # 6. Insert HDMI audio injection into device HDEF (HD3K/HD4K HDMI audio - Part 2/2)
 into method label _DSM parent_adr 0x001B0000 remove_entry;
