@@ -19,7 +19,7 @@ begin
 	    If (LEqual (Arg2, Zero)) { Return (Buffer() { 0x03 } ) }\n
 	    Return (Package()\n
 	    {\n
-	        "AAPL,ig-platform-id", Buffer() { 0x1A, 0x00, 0x66, 0x01 },\n
+	        "AAPL,ig-platform-id", Buffer() { 0x0A, 0x00, 0x66, 0x01 },\n
 	        "hda-gfx", Buffer() { "onboard-1" },\n
 	    })\n
     }\n
