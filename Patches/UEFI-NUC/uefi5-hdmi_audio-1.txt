@@ -1,5 +1,5 @@
 # Maintained by: toleda for: github.com/toleda/audio_hdmi
-# File: uefi5-hdmi_audio-1_v2.0
+# File: uefi5-hdmi_audio-1_v2.1
 # Credit: PikeRAlpha, PJALM, RehabMan, SL_UnderWater
 
 # NUC HD4K HDMI audio dsdt edits (Audio ID: 1).
@@ -40,4 +40,4 @@ begin
     }\n
 end;
 into definitionblock code_regex . insert
-begin Store ("uefi5-hdmi_audio-1.txt_v2.0 dsdt edits, github.com/toleda", Debug) end
+begin Store ("uefi5-hdmi_audio-1.txt_v2.1 dsdt edits, github.com/toleda", Debug) end
