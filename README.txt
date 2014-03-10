@@ -79,7 +79,8 @@ Guides
     ib4. HD4K-on-6_Series_MEI - HD4K MEI dsdt edit (apply once, only with uefi1 - uefi4)
     3b5. HD3K-on-7_Series_MEI - HD3K MEI dsdt edit (apply once, only with uefi1 - uefi4)
 1d. ssdts
-    audio_ssdt-hdmi-uefi_hd4k-amd-nvidia-3_v1.zip
+    audio_ssdt-hdmi-uefi_hd4k-amd-nvidia-3_v6.zip
+    audio_ssdt-hdmi-uefi_hd3k-amd-nvidia-3_v3.zip
 
 toleda
 https://github.com/toleda/audio_hdmi_uefi
