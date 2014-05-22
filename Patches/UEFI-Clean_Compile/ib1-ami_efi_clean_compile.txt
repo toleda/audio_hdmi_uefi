@@ -1,5 +1,6 @@
 # Maintained by: toleda for: github.com/toleda_hdmi_hd4000
 # File: ib1-ami_efi_clean_compile_v1.1
+# File: ami_efi_clean_compile_v1.1
 # Credits: http://olarila.com/forum/patches.php, PJALM http://repo.pjalm.info/general
 #
 # Complier fixes for newly extracted AMI/UEFI/dsdts
@@ -34,6 +35,8 @@ into_all all code_regex 0x00,(\s+)//\sLength replaceall_matched begin 0x01,%1// 
 end;
 # Fix the 'Possible operator timeout is ignored' error
 into_all all code_regex (Acquire\s\(....,\s0x)....\) replace_matched begin %1FFFF) end;
+# Fix USB
+into_all all code_regex (Name\s*\(_PLD,\s*)Buffer(\s\(0x10\)[^\)]*) replaceall_matched begin %1Package(0x01) { Buffer%2} end;
 # Debug
 into definitionblock code_regex . insert
-begin Store ("ib1-ami_efi_clean_compile_v1.1 dsdt edits, github.com/toleda", Debug) end
+begin Store ("ami_efi_clean_compile_v1.1 dsdt edits, github.com/toleda", Debug) end
